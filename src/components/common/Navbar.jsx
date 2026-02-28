@@ -6,6 +6,10 @@ import arrowIcon from "../../assets/icons/arrow.svg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="bg-[#F3F4F6] border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-6">
@@ -67,25 +71,46 @@ const Navbar = () => {
 
         {/* ================= MOBILE DROPDOWN ================= */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-4 border-t border-gray-200">
-            <a href="#" className="block text-gray-700">
+          <div className="md:hidden border-t border-gray-200 py-4 space-y-4">
+            <a
+              href="#"
+              className="block text-gray-700"
+              onClick={handleCloseMenu}
+            >
               Find Jobs
             </a>
-            <a href="#" className="block text-gray-700">
+            <a
+              href="#"
+              className="block text-gray-700"
+              onClick={handleCloseMenu}
+            >
               Career Resources
             </a>
-            <a href="#" className="block text-gray-700">
+            <a
+              href="#"
+              className="block text-gray-700"
+              onClick={handleCloseMenu}
+            >
               For Employers
             </a>
 
             <div className="pt-3 flex flex-col gap-3">
-              <button className="bg-orange-500 text-white px-4 py-2 rounded-lg">
+              <button
+                className="bg-orange-500 text-white px-4 py-2 rounded-lg"
+                onClick={handleCloseMenu}
+              >
                 Register
               </button>
-              <button className="border border-orange-500 text-orange-500 px-4 py-2 rounded-lg bg-white">
+              <button
+                className="border border-orange-500 text-orange-500 px-4 py-2 rounded-lg bg-white"
+                onClick={handleCloseMenu}
+              >
                 Login
               </button>
-              <button className="flex justify-center items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-600">
+              <button
+                className="flex justify-center items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-600"
+                onClick={handleCloseMenu}
+              >
                 For Recruiters
                 <img src={arrowIcon} alt="arrow" className="h-4 w-4" />
               </button>
