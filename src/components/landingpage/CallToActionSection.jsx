@@ -2,29 +2,33 @@ const CallToActionSection = () => {
   return (
     <section className="w-full bg-blue-600">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
-        <div className="flex flex-col items-start gap-6 rounded-3xl bg-blue-600/0 text-white lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col gap-6 rounded-3xl bg-blue-600 px-6 py-8 text-white shadow-lg shadow-blue-500/40 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12">
           <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-100">
-              Ready to hire or get hired?
-            </p>
             <h2 className="text-2xl font-semibold leading-tight sm:text-3xl">
-              Start your Beyond Workz journey today.
+              Empower your career with Beyond Workz today
             </h2>
             <p className="max-w-xl text-sm text-blue-100 sm:text-base">
-              Create your profile, post a job, or explore roles in minutes. Stay
-              connected to opportunities that move your career forward.
+              Continue with your preferred method to access personalized job
+              matches, saved searches, and more.
             </p>
           </div>
 
-          <div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-end sm:gap-4 lg:w-auto">
-            <button className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-blue-700 shadow-sm transition hover:bg-blue-50">
-              I&apos;m looking for a job
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center sm:gap-4">
+            <button className="inline-flex flex-1 items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-blue-50 sm:flex-none">
+              Continue with Google
             </button>
-            <button className="inline-flex items-center justify-center rounded-full border border-blue-100 bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700">
-              I want to hire
+            <button className="inline-flex flex-1 items-center justify-center rounded-full border border-blue-200 bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 sm:flex-none">
+              Continue with Email
             </button>
           </div>
         </div>
+
+        <p className="mt-4 text-center text-xs text-blue-100">
+          By continuing, you agree to our{" "}
+          <button className="font-semibold underline underline-offset-2">
+            T&amp;C.
+          </button>
+        </p>
       </div>
     </section>
   );

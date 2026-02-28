@@ -1,10 +1,8 @@
 const categories = [
-  { label: "Office & Admin", roles: "Front office, back office, support" },
-  { label: "Sales & Marketing", roles: "Field sales, retail, promoters" },
-  { label: "Operations & Logistics", roles: "Warehouse, delivery, supply chain" },
-  { label: "Banking & Finance", roles: "Relationship managers, advisors" },
-  { label: "IT & Support", roles: "Helpdesk, support engineers" },
-  { label: "Manufacturing & On‑site", roles: "Supervisors, technicians, operators" },
+  { label: "Tech & IT", jobs: "12,450 Jobs" },
+  { label: "Construction", jobs: "8,320 Jobs" },
+  { label: "Healthcare", jobs: "15,900 Jobs" },
+  { label: "Finance", jobs: "6,210 Jobs" },
 ];
 
 const JobCategoriesSection = () => {
@@ -12,11 +10,8 @@ const JobCategoriesSection = () => {
     <section className="w-full bg-slate-50">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <header className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">
-            Explore roles
-          </p>
           <h2 className="mt-2 text-2xl font-semibold text-slate-900 sm:text-3xl">
-            Roles for every kind of worker.
+            Browse by Category
           </h2>
           <p className="mt-3 text-sm text-slate-600 sm:text-base">
             From corporate offices to shop floors and field operations, Beyond
@@ -24,18 +19,23 @@ const JobCategoriesSection = () => {
           </p>
         </header>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((category) => (
             <article
               key={category.label}
-              className="flex flex-col rounded-2xl border border-slate-100 bg-white p-4 shadow-sm shadow-slate-100"
+              className="flex flex-col items-start gap-4 rounded-2xl bg-white px-6 py-6 shadow-sm shadow-slate-200"
             >
-              <h3 className="text-sm font-semibold text-slate-900 sm:text-base">
-                {category.label}
-              </h3>
-              <p className="mt-2 text-xs text-slate-600 sm:text-sm">
-                {category.roles}
-              </p>
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                <span className="text-lg font-semibold">⌘</span>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-slate-900 sm:text-base">
+                  {category.label}
+                </h3>
+                <p className="mt-1 text-xs font-medium text-slate-500 sm:text-sm">
+                  {category.jobs}
+                </p>
+              </div>
             </article>
           ))}
         </div>

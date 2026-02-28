@@ -13,22 +13,22 @@ const logos = [capgemini, genpact, icici, kotak, techMahindra];
 
 const Hero = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-blue-600/5 to-slate-50">
+    <section className="w-full bg-gradient-to-b from-blue-500/30 via-blue-500/10 to-slate-50">
       <div className="mx-auto max-w-7xl px-4 pt-12 pb-12 sm:px-6 lg:px-8 lg:pt-16 lg:pb-20">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div className="space-y-8">
-            <header className="space-y-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">
-                Job search made simple
-              </p>
+            <header className="space-y-4 text-center lg:text-left">
               <h1 className="text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                Find your{" "}
-                <span className="text-blue-600">Beyond Workz</span> today.
+                Go{" "}
+                <span className="text-blue-600">
+                  Beyond
+                </span>{" "}
+                Just a Job.
               </h1>
-              <p className="max-w-xl text-sm text-slate-600 sm:text-base">
-                Connect with top employers across industries—from office roles
-                to on‑site operations. Your next opportunity is just a search
-                away.
+              <p className="mx-auto max-w-xl text-sm text-slate-600 sm:text-base lg:mx-0">
+                Connect with top employers across industries. Whether you&apos;re in
+                the office or out in the field, your next big opportunity
+                awaits.
               </p>
             </header>
 
@@ -76,7 +76,7 @@ const Hero = () => {
 
             <div className="space-y-3">
               <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
-                <span className="text-slate-500">Trending searches:</span>
+                <span className="text-slate-500">Trending:</span>
                 {trendingTags.map((tag) => (
                   <span
                     key={tag}
