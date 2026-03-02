@@ -8,111 +8,100 @@ import searchIcon from "../../assets/icons/search.svg";
 import locationIcon from "../../assets/icons/location.svg";
 
 const trendingTags = ["Remote", "UX Designer", "Forklift Operator", "Marketing"];
-
 const logos = [capgemini, genpact, icici, kotak, techMahindra];
 
 const Hero = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-blue-500/30 via-blue-500/10 to-slate-50">
-      <div className="mx-auto max-w-7xl px-4 pt-12 pb-12 sm:px-6 lg:px-8 lg:pt-16 lg:pb-20">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
-          <div className="space-y-8">
-            <header className="space-y-4 text-center lg:text-left">
-              <h1 className="text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                Go{" "}
-                <span className="text-blue-600">
-                  Beyond
-                </span>{" "}
-                Just a Job.
-              </h1>
-              <p className="mx-auto max-w-xl text-sm text-slate-600 sm:text-base lg:mx-0">
-                Connect with top employers across industries. Whether you&apos;re in
-                the office or out in the field, your next big opportunity
-                awaits.
-              </p>
-            </header>
+    <section className="w-full bg-gradient-to-b from-[#2563EB0D] to-[#F8FAFC] pt-20 pb-28">
+      <div className="mx-auto max-w-4xl px-6 text-center">
+        
+        {/* Heading */}
+        <h1 className="text-4xl font-bold text-slate-900 sm:text-5xl">
+          Go <span className="text-blue-600">Beyond</span> Just a Job.
+        </h1>
 
-            <form
-              className="w-full rounded-2xl bg-white p-3 shadow-sm shadow-slate-200"
-              role="search"
-            >
-              <div className="flex flex-col gap-3 md:flex-row md:items-center">
-                <div className="flex flex-1 items-center gap-3 rounded-full px-3 py-2.5 md:px-4">
-                  <img
-                    src={searchIcon}
-                    alt=""
-                    className="h-5 w-5 flex-shrink-0 text-slate-400"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Job title, keywords, or company"
-                    className="w-full border-0 bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
-                  />
-                </div>
+        <p className="mt-4 text-slate-600">
+          Connect with top employers across industries. Whether you're in the office
+          or out in the field, your next big opportunity awaits.
+        </p>
 
-                <div className="hidden h-8 w-px bg-slate-200 md:block" />
-
-                <div className="flex flex-1 items-center gap-3 rounded-full px-3 py-2.5 md:px-4">
-                  <img
-                    src={locationIcon}
-                    alt=""
-                    className="h-5 w-5 flex-shrink-0 text-slate-400"
-                  />
-                  <input
-                    type="text"
-                    placeholder="City, state, or remote"
-                    className="w-full border-0 bg-transparent text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-0"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 md:mt-0 md:w-auto"
-                >
-                  Search jobs
-                </button>
-              </div>
-            </form>
-
-            <div className="space-y-3">
-              <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm">
-                <span className="text-slate-500">Trending:</span>
-                {trendingTags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700 ring-1 ring-slate-200"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-                  Trusted by top enterprises
-                </p>
-                <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-                  {logos.map((logo, index) => (
-                    <img
-                      key={index}
-                      src={logo}
-                      alt="Company logo"
-                      className="h-6 w-auto object-contain sm:h-8"
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex justify-center lg:justify-end">
-            <img
-              src={heroImage}
-              alt="Professionals exploring job opportunities"
-              className="w-full max-w-sm rounded-3xl bg-white/40 p-3 shadow-sm shadow-slate-200 sm:max-w-md lg:max-w-lg"
+        {/* Search Bar */}
+        <form
+          className="mx-auto mt-8 flex max-w-3xl items-center rounded-full bg-white p-2 shadow-md"
+          role="search"
+        >
+          {/* Keyword */}
+          <div className="flex flex-1 items-center gap-2 px-4">
+            <img src={searchIcon} alt="" className="h-4 w-4 opacity-60" />
+            <input
+              type="text"
+              placeholder="Job title, keywords, or company"
+              className="w-full bg-transparent text-sm focus:outline-none"
             />
           </div>
+
+          {/* Divider */}
+          <div className="h-6 w-px bg-slate-200" />
+
+          {/* Location */}
+          <div className="flex flex-1 items-center gap-2 px-4">
+            <img src={locationIcon} alt="" className="h-4 w-4 opacity-60" />
+            <input
+              type="text"
+              placeholder="City, state, or remote"
+              className="w-full bg-transparent text-sm focus:outline-none"
+            />
+          </div>
+
+          {/* Button */}
+          <button
+            type="submit"
+            className="ml-2 rounded-full bg-blue-600 px-6 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
+            Search
+          </button>
+        </form>
+
+        {/* Trending */}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
+          <span className="text-slate-500">Trending:</span>
+          {trendingTags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full bg-white px-3 py-1 text-xs text-slate-700 shadow-sm"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
+
+        {/* Trusted Logos */}
+        <div className="mt-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
+            Trusted by top enterprises
+          </p>
+
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-6 opacity-80">
+            {logos.map((logo, index) => (
+              <img
+                key={index}
+                src={logo}
+                alt="Company logo"
+                className="h-6 w-auto object-contain"
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom Illustration */}
+        <div className="mt-12 flex justify-center">
+          <img
+            src={heroImage}
+            alt="Professional working"
+            className="w-full max-w-md"
+          />
+        </div>
+
       </div>
     </section>
   );

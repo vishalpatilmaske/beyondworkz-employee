@@ -1,5 +1,6 @@
 import { useState } from "react";
 import arrowIcon from "../../assets/icons/arrow.svg";
+import logo from "../../assets/logos/logo.svg";
 
 const NAV_LINKS = [
   { label: "Find Jobs", href: "#" },
@@ -25,9 +26,7 @@ const Navbar = () => {
             Beyond Workz
           </span>
         </a>
-
-        <div className="hidden items-center gap-10 md:flex">
-          <ul className="flex items-center gap-8 text-sm font-medium text-slate-600">
+         <ul className="flex items-center gap-8 text-sm font-medium text-slate-600">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
                 <a
@@ -40,6 +39,8 @@ const Navbar = () => {
             ))}
           </ul>
 
+
+        <div className="hidden items-center gap-10 md:flex">
           <div className="flex items-center gap-4">
             <button className="rounded-full bg-orange-500 px-6 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600">
               Register
