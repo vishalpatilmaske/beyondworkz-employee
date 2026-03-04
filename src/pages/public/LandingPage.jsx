@@ -27,46 +27,33 @@ const Landing = () => {
       </section>
 
       {/* ================= FEATURED JOBS ================= */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className=" bg-[#94A3B8]">
           <FeaturedJobsSection />
-        </div>
       </section>
 
       {/* ================= WHY CHOOSE US ================= */}
-      <section className="py-24 bg-gradient-to-b from-blue-100 via-blue-50 to-slate-100">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="">
           <WhyChooseUsSection />
-        </div>
       </section>
 
       {/* ================= EMPLOYER BANNER ================= */}
-      <section className="bg-slate-100 pb-24">
+      <section className="bg-slate-100 pt-17">
         <div className="max-w-7xl mx-auto px-6">
           <EmployerBannerSection />
         </div>
       </section>
 
       {/* ================= COOL PLACES ================= */}
-      <section className="py-24 bg-gradient-to-b from-slate-100 to-blue-200">
-        <div className="max-w-7xl mx-auto px-6">
           <CoolPlacesSection />
-        </div>
-      </section>
 
       {/* ================= CAREER RESOURCES ================= */}
-      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <CareerResourcesSection />
         </div>
-      </section>
+
 
       {/* ================= TESTIMONIALS ================= */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
           <TestimonialsSection />
-        </div>
-      </section>
 
       {/* ================= CALL TO ACTION ================= */}
       <section className="py-24 bg-blue-600">

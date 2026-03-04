@@ -23,7 +23,7 @@ const reasons = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="w-full bg-white">
+    <section className="relative w-full bg-gradient-to-b from-[#F8FAFF] via-[#DCE7FF] to-[#B8CCF6]">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <header className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
