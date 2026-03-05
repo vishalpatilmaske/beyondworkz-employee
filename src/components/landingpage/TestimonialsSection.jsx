@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Sarahjenkins from "../../assets/Sarah_Jenkins.svg"
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -7,18 +8,21 @@ const TestimonialSection = () => {
       name: "Sarah Jenkins",
       role: "Product Manager @ InnovateTech",
       text: "I found my ideal role within two weeks of signing up. The platform is incredibly intuitive, and the matching algorithm is spot on. I've never had a smoother job search experience.",
+      image: Sarahjenkins,
     },
     {
       id: 2,
       name: "Michael Chen",
       role: "Software Engineer @ DevCore",
       text: "Beyond Workz completely transformed my job hunt. The recommendations were accurate and the process felt effortless.",
+      image: Sarahjenkins,
     },
     {
       id: 3,
       name: "Priya Sharma",
       role: "UI Designer @ Creatify",
       text: "The interface is beautiful and easy to use. I landed interviews within days of applying!",
+      image: Sarahjenkins,
     },
   ];
 
@@ -29,16 +33,17 @@ const TestimonialSection = () => {
   };
 
   const prevSlide = () => {
-    setActive((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    setActive((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
   };
 
   return (
     <section
-      className="relative w-full flex justify-center mt-16"
-      style={{ background: "#F8FAFC" }}
+      className="w-full flex justify-center bg-white py-24"
     >
-      {/* Fixed Width Container */}
-      <div className="relative w-[1440px] h-[631px] overflow-hidden py-24">
+      <div className="w-[1440px] flex flex-col items-center">
+
         {/* Slider Container */}
         <div className="relative flex items-center justify-center h-[420px]">
           {testimonials.map((item, index) => {
@@ -48,17 +53,16 @@ const TestimonialSection = () => {
               <div
                 key={item.id}
                 className={`absolute transition-all duration-500 ease-in-out
-                  ${
-                    isActive
-                      ? "z-20 scale-100 opacity-100"
-                      : "z-10 scale-90 opacity-40"
+                  ${isActive
+                    ? "z-20 scale-100 opacity-100"
+                    : "z-10 scale-90 opacity-40"
                   }`}
                 style={{
                   transform: `translateX(${(index - active) * 420}px)`,
                 }}
               >
                 <div
-                  className="w-[800px] max-w-[800px] h-[439px]
+                  className="w-[800px] h-[439px]
                   rounded-[24px] border border-slate-200
                   bg-white shadow-lg
                   px-[48px] py-[56px]
@@ -66,18 +70,35 @@ const TestimonialSection = () => {
                   text-center"
                 >
                   {/* Stars */}
-                  <div className="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
+                  <div className="text-yellow-400 text-lg">
+                    ⭐⭐⭐⭐⭐
+                  </div>
 
                   {/* Testimonial Text */}
-                  <p className="text-lg text-slate-700 leading-relaxed">
+                  <p className="font-['Inter'] font-medium text-[24px] leading-[36px] tracking-[-0.24px] text-center text-slate-700 max-w-[702px] mx-auto text-[#0F172A]">
                     "{item.text}"
                   </p>
 
                   {/* Profile Section */}
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="w-16 h-16 rounded-full bg-slate-300" />
-                    <p className="font-semibold text-slate-900">{item.name}</p>
-                    <p className="text-sm text-slate-500">{item.role}</p>
+                  <div
+                    className="flex flex-col items-center
+                    w-[702px] h-[133px]
+                     pt-[8px] gap-[16px]
+                       mx-auto"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+
+                    <p className="font-semibold text-slate-900">
+                      {item.name}
+                    </p>
+
+                    <p className="text-sm text-slate-500">
+                      {item.role}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -85,26 +106,36 @@ const TestimonialSection = () => {
           })}
         </div>
 
-        {/* ✅ Figma Style Controller */}
-        <div className="absolute bottom-16 w-full flex justify-center">
-          <div className="flex items-center gap-4 px-5 py-2 bg-[#E5E7EB] rounded-full">
-            {/* Left Arrow */}
-            <button onClick={prevSlide} className="text-gray-600 text-lg">
+        {/*  Controller  */}
+        <div className="mt-12 flex justify-center">
+          <div
+            className="w-[184px] h-[40px] 
+            bg-[#FFFFFF] 
+            rounded-[20px] 
+            flex items-center justify-between 
+            px-4 shadow-sm"
+          >
+            <button
+              onClick={prevSlide}
+              className="text-gray-600 text-lg leading-none"
+            >
               ‹
             </button>
 
-            {/* Progress Line */}
-            <div className="relative w-14 h-[3px] bg-gray-300 rounded-full overflow-hidden">
+            <div className="relative w-[80px] h-[4px] bg-[#DDDDDD] rounded-[99px] overflow-hidden">
               <div
-                className="absolute left-0 top-0 h-full bg-blue-600 rounded-full transition-all duration-300"
+                className="absolute left-0 top-0 h-full bg-blue-600 rounded-[99px] transition-all duration-300"
                 style={{
-                  width: `${((active + 1) / testimonials.length) * 100}%`,
+                  width: `${((active + 1) / testimonials.length) * 100
+                    }%`,
                 }}
               />
             </div>
 
-            {/* Right Arrow */}
-            <button onClick={nextSlide} className="text-gray-600 text-lg">
+            <button
+              onClick={nextSlide}
+              className="text-gray-600 text-lg leading-none"
+            >
               ›
             </button>
           </div>

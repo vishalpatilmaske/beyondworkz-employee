@@ -19,40 +19,48 @@ const companyLogos = [
 
 const CoolPlacesSection = () => {
   return (
-    <section className="w-full" style={{ background: "#FFFFFF" }}>
-      <div className="mx-auto w-full max-w-[1250px] px-6 pt-16">
+    <section
+      className="w-full flex justify-center"
+      style={{
+        background:
+          "linear-gradient(0deg, #F1F5F9 0%, #2563EB 50%, #F0F4F8 100%)",
+      }}
+    >
+      <div className="w-[1440px] px-6 pt-20 flex flex-col">
+
         {/* Heading */}
-        <header className="text-center">
-          <h2 className="text-2xl font-semibold sm:text-3xl">
+        <div className="text-center">
+          <h2 className="font-['Inter'] font-bold text-[32px] leading-[20px] tracking-[0%] uppercase text-[#191500]">
             Cool Places to Work
           </h2>
-        </header>
+        </div>
 
         {/* Logos */}
-        <div className="mt-8 flex flex-wrap justify-center gap-6">
+        <div className="mt-12 flex flex-wrap justify-center gap-8">
           {companyLogos.map((logo, index) => (
             <div
               key={index}
-              className=" bg-white w-[168px] h-[64px] flex items-center justify-center 
-                 rounded-[16.8px] bg-[#FFFFFF01]
-                 shadow-[0px_5.6px_8.4px_-2.8px_#0A0B0E14]"
+              className="w-[168px] h-[64px] flex items-center justify-center
+              bg-white rounded-[16px] shadow-md"
             >
               <img
                 src={logo}
                 alt="Company logo"
-                className="max-h-8 object-contain bg-white"
+                className="max-h-8 object-contain"
               />
             </div>
           ))}
         </div>
-        {/* Image */}
-        <div className="mt-12 flex justify-center">
+
+        {/* Push Image to Bottom */}
+        <div className="mt-8 flex justify-center">
           <img
             src={coolPlaceImg}
             alt="Professional at a cool workplace"
-            className="w-[491px] h-auto object-contain"
+            className="w-[491px] object-contain"
           />
         </div>
+
       </div>
     </section>
   );
