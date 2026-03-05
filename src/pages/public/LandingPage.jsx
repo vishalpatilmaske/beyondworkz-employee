@@ -20,43 +20,28 @@ const Landing = () => {
       <Hero />
 
       {/* ================= JOB CATEGORIES ================= */}
-      <section className=" bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <JobCategoriesSection />
-        </div>
-      </section>
+      <JobCategoriesSection />
 
       {/* ================= FEATURED JOBS ================= */}
-      <section className=" bg-[#94A3B8]">
-          <FeaturedJobsSection />
-      </section>
+      <FeaturedJobsSection />
 
       {/* ================= WHY CHOOSE US ================= */}
-      <section className="">
-          <WhyChooseUsSection />
-      </section>
+      <WhyChooseUsSection />
 
       {/* ================= EMPLOYER BANNER ================= */}
-      <section className="bg-slate-100 pt-17">
-        <div className="max-w-7xl mx-auto px-6">
-          <EmployerBannerSection />
-        </div>
-      </section>
+      <EmployerBannerSection />
 
       {/* ================= COOL PLACES ================= */}
-          <CoolPlacesSection />
+      <CoolPlacesSection />
 
       {/* ================= CAREER RESOURCES ================= */}
-        <div className="max-w-7xl mx-auto px-6">
-          <CareerResourcesSection />
-        </div>
-
+      <CareerResourcesSection />
 
       {/* ================= TESTIMONIALS ================= */}
-          <TestimonialsSection />
+      <TestimonialsSection />
 
       {/* ================= CALL TO ACTION ================= */}
-      <section className="py-24 bg-blue-600">
+      <section className="py-24" style={{ background: "#1248C1" }}>
         <div className="max-w-7xl mx-auto px-6">
           <CallToActionSection />
         </div>

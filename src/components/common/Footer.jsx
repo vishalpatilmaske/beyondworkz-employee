@@ -1,12 +1,30 @@
 import logoMark from "../../assets/icons/arrow.svg";
 
-const seekerLinks = ["Browse Jobs", "Browse Companies", "Salary Calculator", "Resume Builder"];
-const employerLinks = ["Post a Job", "Browse Candidates", "Pricing Plans", "Employer Dashboard"];
-const companyLinks = ["About Us", "Careers", "Privacy Policy", "Terms of Service"];
+const seekerLinks = [
+  "Browse Jobs",
+  "Browse Companies",
+  "Salary Calculator",
+  "Resume Builder",
+];
+const employerLinks = [
+  "Post a Job",
+  "Browse Candidates",
+  "Pricing Plans",
+  "Employer Dashboard",
+];
+const companyLinks = [
+  "About Us",
+  "Careers",
+  "Privacy Policy",
+  "Terms of Service",
+];
 
 const Footer = () => {
   return (
-    <footer className="border-t border-slate-200 bg-slate-950 text-slate-300">
+    <footer
+      className="border-t border-slate-200"
+      style={{ background: "#0F172A" }}
+    >
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="space-y-4">
@@ -18,23 +36,26 @@ const Footer = () => {
                 Beyond Workz
               </span>
             </div>
-            <p className="max-w-xs text-sm leading-relaxed text-slate-400">
+            <p
+              className="max-w-xs text-sm leading-relaxed"
+              style={{ color: "#A4A4A4" }}
+            >
               Connecting great talent with great opportunities across
               industries—from office roles to on‑site operations.
             </p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-400">
+            <h3
+              className="text-sm font-semibold uppercase tracking-[0.16em]"
+              style={{ color: "#A4A4A4" }}
+            >
               Job seekers
             </h3>
-            <ul className="mt-4 space-y-3 text-sm">
+            <ul className="mt-4 space-y-3 text-sm" style={{ color: "#A4A4A4" }}>
               {seekerLinks.map((item) => (
                 <li key={item}>
-                  <a
-                    href="#"
-                    className="transition-colors hover:text-white"
-                  >
+                  <a href="#" className="transition-colors hover:text-white">
                     {item}
                   </a>
                 </li>
@@ -43,16 +64,16 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-400">
+            <h3
+              className="text-sm font-semibold uppercase tracking-[0.16em]"
+              style={{ color: "#A4A4A4" }}
+            >
               Employers
             </h3>
-            <ul className="mt-4 space-y-3 text-sm">
+            <ul className="mt-4 space-y-3 text-sm" style={{ color: "#A4A4A4" }}>
               {employerLinks.map((item) => (
                 <li key={item}>
-                  <a
-                    href="#"
-                    className="transition-colors hover:text-white"
-                  >
+                  <a href="#" className="transition-colors hover:text-white">
                     {item}
                   </a>
                 </li>
@@ -61,16 +82,16 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-slate-400">
+            <h3
+              className="text-sm font-semibold uppercase tracking-[0.16em]"
+              style={{ color: "#A4A4A4" }}
+            >
               Company
             </h3>
-            <ul className="mt-4 space-y-3 text-sm">
+            <ul className="mt-4 space-y-3 text-sm" style={{ color: "#A4A4A4" }}>
               {companyLinks.map((item) => (
                 <li key={item}>
-                  <a
-                    href="#"
-                    className="transition-colors hover:text-white"
-                  >
+                  <a href="#" className="transition-colors hover:text-white">
                     {item}
                   </a>
                 </li>
@@ -79,7 +100,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-800 pt-6 text-xs text-slate-500 sm:flex-row">
+        <div
+          className="mt-10 flex flex-col items-center justify-between gap-4 pt-6 text-xs sm:flex-row"
+          style={{ borderTop: "1px solid #2D3339", color: "#A4A4A4" }}
+        >
           <p>© {new Date().getFullYear()} Beyond Workz. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <button

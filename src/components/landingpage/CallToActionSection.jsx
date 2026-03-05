@@ -1,8 +1,11 @@
 const CallToActionSection = () => {
   return (
-    <section className="w-full bg-blue-600">
+    <section className="w-full">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
-        <div className="flex flex-col gap-6 rounded-3xl bg-blue-600 px-6 py-8 text-white shadow-lg shadow-blue-500/40 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12">
+        <div
+          className="flex flex-col gap-6 rounded-3xl px-6 py-8 text-white shadow-lg sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12"
+          style={{ background: "#1248C1" }}
+        >
           <div className="space-y-3">
             <h2 className="text-2xl font-semibold leading-tight sm:text-3xl">
               Empower your career with Beyond Workz today
@@ -35,4 +38,3 @@ const CallToActionSection = () => {
 };
 
 export default CallToActionSection;
-

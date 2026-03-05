@@ -1,13 +1,7 @@
-import { useState } from "react";
-import LandingPage from "./pages/public/LandingPage";
-
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-  return (
-    <>
-      <LandingPage />
-    </>
-  );
+  return <AppRoutes />;
 }
 
 export default App;

@@ -49,16 +49,16 @@ const FeaturedJobsSection = () => {
   const progressWidth = ((current + 1) / totalSlides) * 100;
 
   return (
-    <section className="w-full bg-slate-50">
+    <section className="w-full bg-white">
       <div className="mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:px-8 lg:pb-16">
-
         {/* Header */}
         <header className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
             Featured Jobs
           </h2>
           <p className="mt-3 text-sm text-slate-600 sm:text-base">
-            Discover hand-picked opportunities from top companies actively hiring right now.
+            Discover hand-picked opportunities from top companies actively
+            hiring right now.
           </p>
         </header>
 
@@ -69,14 +69,9 @@ const FeaturedJobsSection = () => {
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {jobs.map((job, index) => (
-              <div
-                key={index}
-                className="w-full md:w-1/3 flex-shrink-0 px-3"
-              >
+              <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-3">
                 <article className="flex h-full flex-col justify-between rounded-2xl bg-white p-6 shadow-sm shadow-slate-200 transition hover:shadow-md">
-                  
                   <div className="space-y-4">
-                    
                     {/* Logo + Title */}
                     <div className="flex items-start gap-4">
                       <div className="flex h-[50px] w-[50px] items-center justify-center rounded-lg border border-slate-200 bg-white">
@@ -119,7 +114,6 @@ const FeaturedJobsSection = () => {
                       Apply Now
                     </button>
                   </div>
-
                 </article>
               </div>
             ))}
@@ -129,7 +123,6 @@ const FeaturedJobsSection = () => {
         {/* Custom Slide Bar - LEFT SIDE */}
         <div className="mt-10 flex justify-start">
           <div className="flex items-center gap-4 rounded-full bg-white px-6 py-3 shadow-sm border border-slate-200">
-
             {/* Left Arrow */}
             <button
               onClick={prev}
@@ -155,10 +148,8 @@ const FeaturedJobsSection = () => {
             >
               &#8250;
             </button>
-
           </div>
         </div>
-
       </div>
     </section>
   );

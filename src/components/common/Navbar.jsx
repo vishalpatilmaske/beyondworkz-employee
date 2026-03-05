@@ -1,9 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import arrowIcon from "../../assets/icons/arrow.svg";
 import logo from "../../assets/logos/logo.svg";
 
 const NAV_LINKS = [
-  { label: "Find Jobs", href: "#" },
+  { label: "Find Jobs", href: "/jobs" },
   { label: "Career Resources", href: "#" },
   { label: "For Employers", href: "#" },
 ];
@@ -16,38 +17,43 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-20 border-b border-slate-200 bg-white/80 backdrop-blur">
+    <nav className="sticky top-0 z-20 border-b border-slate-200 bg-white backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-orange-500 text-sm font-semibold text-white">
             BW
           </div>
           <span className="text-lg font-semibold text-slate-900">
             Beyond Workz
           </span>
-        </a>
-         <ul className="flex items-center gap-8 text-sm font-medium text-slate-600">
-            {NAV_LINKS.map((link) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  className="transition-colors hover:text-slate-900"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-
+        </Link>
+        <ul className="flex items-center gap-8 text-sm font-medium text-slate-600">
+          {NAV_LINKS.map((link) => (
+            <li key={link.label}>
+              <Link
+                to={link.href}
+                className="transition-colors hover:text-slate-900"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
         <div className="hidden items-center gap-10 md:flex">
           <div className="flex items-center gap-4">
-            <button className="rounded-full bg-orange-500 px-6 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600">
+            <Link
+              to="/register"
+              className="rounded-full bg-orange-500 px-6 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600 inline-block"
+            >
               Register
-            </button>
-            <button className="rounded-full border border-orange-500 bg-white px-6 py-2 text-sm font-semibold text-orange-500 transition hover:bg-orange-50">
+            </Link>
+            <Link
+              to="/login"
+              className="rounded-full border border-orange-500 bg-white px-6 py-2 text-sm font-semibold text-orange-500 transition hover:bg-orange-50 inline-block"
+            >
               Login
-            </button>
+            </Link>
             <div className="h-6 w-px bg-slate-200" />
             <button className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50">
               For Recruiters
@@ -90,30 +96,32 @@ const Navbar = () => {
             <ul className="space-y-4 text-sm font-medium text-slate-700">
               {NAV_LINKS.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="block"
                     onClick={handleCloseMenu}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
 
             <div className="mt-6 space-y-3">
-              <button
-                className="w-full rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600"
+              <Link
+                to="/register"
+                className="w-full rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600 block text-center"
                 onClick={handleCloseMenu}
               >
                 Register
-              </button>
-              <button
-                className="w-full rounded-full border border-orange-500 bg-white px-4 py-2 text-sm font-semibold text-orange-500 transition hover:bg-orange-50"
+              </Link>
+              <Link
+                to="/login"
+                className="w-full rounded-full border border-orange-500 bg-white px-4 py-2 text-sm font-semibold text-orange-500 transition hover:bg-orange-50 block text-center"
                 onClick={handleCloseMenu}
               >
                 Login
-              </button>
+              </Link>
               <button
                 className="flex w-full items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50"
                 onClick={handleCloseMenu}
