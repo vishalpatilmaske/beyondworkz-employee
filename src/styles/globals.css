@@ -52,26 +52,6 @@
   /* Typography */
   --font-family-inter: "Inter", sans-serif;
 
-  /* Font Sizes - Heading 1 */
-  --heading-1-size: 48px;
-  --heading-1-weight: 700;
-  --heading-1-line-height: 60px;
-
-  /* Font Sizes - Heading 2 */
-  --heading-2-size: 36px;
-  --heading-2-weight: 700;
-  --heading-2-line-height: 44px;
-
-  /* Font Sizes - Heading 3 */
-  --heading-3-size: 28px;
-  --heading-3-weight: 700;
-  --heading-3-line-height: 36px;
-
-  /* Font Sizes - Heading 4 */
-  --heading-4-size: 24px;
-  --heading-4-weight: 700;
-  --heading-4-line-height: 32px;
-
   /* Font Sizes - Body Large */
   --body-lg-size: 18px;
   --body-lg-weight: 400;
@@ -103,35 +83,6 @@ body {
   padding: 0;
   background-color: var(--color-neutral-50);
   color: var(--color-neutral-900);
-}
-
-/* Heading Styles */
-h1 {
-  font-size: var(--heading-1-size);
-  font-weight: var(--heading-1-weight);
-  line-height: var(--heading-1-line-height);
-  margin: 0;
-}
-
-h2 {
-  font-size: var(--heading-2-size);
-  font-weight: var(--heading-2-weight);
-  line-height: var(--heading-2-line-height);
-  margin: 0;
-}
-
-h3 {
-  font-size: var(--heading-3-size);
-  font-weight: var(--heading-3-weight);
-  line-height: var(--heading-3-line-height);
-  margin: 0;
-}
-
-h4 {
-  font-size: var(--heading-4-size);
-  font-weight: var(--heading-4-weight);
-  line-height: var(--heading-4-line-height);
-  margin: 0;
 }
 
 /* Button Reset */

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import searchIcon from "../../assets/icons/search.svg";
 import locationIcon from "../../assets/icons/location.svg";
+import experienceIcon from "../../assets/icons/briefcase.svg";
 
 const SearchBar = () => {
   const [jobTitle, setJobTitle] = useState("");
@@ -8,45 +9,50 @@ const SearchBar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Handle search logic here
   };
 
   return (
-    <div className="bg-white border-b border-slate-200">
-      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <div className="bg-slate-100">
+      <div className="max-w-7xl mx-auto px-6 py-6">
         <form
           onSubmit={handleSearch}
-          className="flex flex-col gap-3 lg:flex-row lg:gap-0 lg:items-center"
+          className="flex items-center bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden"
         >
-          {/* Job Title */}
-          <div className="flex flex-1 items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-3 lg:rounded-none lg:border-0 lg:border-r lg:px-6">
-            <img src={searchIcon} alt="" className="h-5 w-5 opacity-60" />
+          {/* Job */}
+          <div className="flex items-center gap-3 px-5 py-4 flex-1">
+            <img src={searchIcon} className="w-5 opacity-60" />
             <input
               type="text"
-              placeholder="Job title, keywords, or company"
+              placeholder="Frontend Developer"
               value={jobTitle}
               onChange={(e) => setJobTitle(e.target.value)}
-              className="w-full bg-transparent text-sm focus:outline-none placeholder:text-slate-400"
+              className="w-full text-sm focus:outline-none"
             />
           </div>
+
+          <div className="h-8 w-px bg-slate-200" />
+
+          {/* Experience */}
+          <div className="flex items-center gap-3 px-5 py-4 flex-1">
+            <img src={experienceIcon} className="w-5 opacity-60" />
+            <span className="text-sm text-slate-700">3-5 Years</span>
+          </div>
+
+          <div className="h-8 w-px bg-slate-200" />
 
           {/* Location */}
-          <div className="flex flex-1 items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-3 lg:rounded-none lg:border-0 lg:border-r lg:px-6">
-            <img src={locationIcon} alt="" className="h-5 w-5 opacity-60" />
+          <div className="flex items-center gap-3 px-5 py-4 flex-1">
+            <img src={locationIcon} className="w-5 opacity-60" />
             <input
               type="text"
-              placeholder="City, state, or remote"
+              placeholder="Bengaluru, India"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="w-full bg-transparent text-sm focus:outline-none placeholder:text-slate-400"
+              className="w-full text-sm focus:outline-none"
             />
           </div>
 
-          {/* Button */}
-          <button
-            type="submit"
-            className="rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 lg:rounded-none lg:px-6 lg:py-0 lg:border-0"
-          >
+          <button className="bg-blue-600 text-white px-8 py-4 text-sm font-semibold hover:bg-blue-700">
             Search
           </button>
         </form>

@@ -1,44 +1,24 @@
+import employerImg from "../../assets/images/profile-creation.jpg";
+
 const EmployerCard = () => {
   return (
-    <aside className="hidden lg:block">
-      <div className="sticky top-20 rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-        <h3 className="text-lg font-semibold text-slate-900">
-          Featured Employer
-        </h3>
+    <aside className="hidden lg:block w-full">
+      <div className="sticky top-20 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <img
+          src={employerImg}
+          className="rounded-lg mb-4 w-full h-40 object-cover"
+        />
 
-        <div className="mt-4 space-y-4">
-          {/* Employer Logo */}
-          <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-slate-100">
-            <div className="h-12 w-12 bg-slate-200 rounded" />
-          </div>
+        <h3 className="font-semibold text-slate-900">Stand out to employers</h3>
 
-          {/* Employer Info */}
-          <div>
-            <h4 className="text-sm font-semibold text-slate-900">
-              TechCorp Solutions
-            </h4>
-            <p className="mt-1 text-xs text-slate-600">San Francisco, CA</p>
-          </div>
+        <p className="text-sm text-slate-500 mt-2">
+          Create a detailed profile, upload your resume, and let top companies
+          discover your talent instantly.
+        </p>
 
-          {/* Stats */}
-          <div className="space-y-3 border-t border-slate-100 pt-4">
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-slate-600">Active Jobs</span>
-              <span className="text-sm font-semibold text-slate-900">24</span>
-            </div>
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-slate-600">Employees</span>
-              <span className="text-sm font-semibold text-slate-900">
-                5,200+
-              </span>
-            </div>
-          </div>
-
-          {/* Button */}
-          <button className="w-full rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700">
-            View Company
-          </button>
-        </div>
+        <button className="mt-4 w-full bg-[#2563EB] text-white py-2 rounded-lg font-semibold hover:bg-blue-700">
+          Create Profile
+        </button>
       </div>
     </aside>
   );

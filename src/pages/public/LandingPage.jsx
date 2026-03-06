@@ -41,11 +41,7 @@ const Landing = () => {
       <TestimonialsSection />
 
       {/* ================= CALL TO ACTION ================= */}
-      <section className="py-24" style={{ background: "#1248C1" }}>
-        <div className="max-w-7xl mx-auto px-6">
-          <CallToActionSection />
-        </div>
-      </section>
+      <CallToActionSection />
 
       <Footer />
     </>

@@ -18,24 +18,30 @@ const JobSearchPage = () => {
     <>
       <Navbar />
 
-      <main className="min-h-screen bg-slate-50">
+      <main className="min-h-screen bg-slate-50 pb-12">
         <SearchBar />
 
-        <section className="py-6 sm:py-8">
-          <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 lg:grid-cols-[260px,minmax(0,1fr),260px] lg:px-8">
-            <FiltersSidebar filters={filters} />
+        <section className="py-6 md:py-8 lg:py-10">
+          <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
+            {/* Use grid with explicit column template + gap */}
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,260px)_minmax(0,1fr)_minmax(0,300px)] gap-6 lg:gap-8 items-start">
+              <FiltersSidebar filters={filters} />
 
-            <div className="space-y-4">
-              <ResultsHeader />
+              {/* CENTER - JOB LIST */}
+              <div className="space-y-5 lg:space-y-6 min-w-0">
+                <ResultsHeader />
 
-              {jobs.map((job) => (
-                <JobCard key={job.id} job={job} />
-              ))}
+                {jobs.map((job) => (
+                  <JobCard key={job.id} job={job} />
+                ))}
 
-              <Pagination />
+                <div className="pt-4">
+                  <Pagination />
+                </div>
+              </div>
+
+              <EmployerCard />
             </div>
-
-            <EmployerCard />
           </div>
         </section>
 

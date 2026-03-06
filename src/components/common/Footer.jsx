@@ -1,5 +1,7 @@
-import logoMark from "../../assets/icons/arrow.svg";
-import FooterLogo from "../../assets/logos/footerlogo.svg"
+import FooterLogo from "../../assets/common-icon/linkedin.svg";
+import LinkedinIcon from "../../assets/common-icon/linkedin.svg";
+import TwitterIcon from "../../assets/common-icon/twitter.svg";
+import FacebookIcon from "../../assets/common-icon/facebook.svg";
 
 const seekerLinks = [
   "Browse Jobs",
@@ -7,12 +9,14 @@ const seekerLinks = [
   "Salary Calculator",
   "Resume Builder",
 ];
+
 const employerLinks = [
   "Post a Job",
   "Browse Candidates",
   "Pricing Plans",
   "Employer Dashboard",
 ];
+
 const companyLinks = [
   "About Us",
   "Careers",
@@ -22,50 +26,33 @@ const companyLinks = [
 
 const Footer = () => {
   return (
-    <footer
-      className="border-t border-slate-200"
-      style={{ background: "#0F172A" }}
-    >
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid gap-10 md:grid-cols-4">
-          <div className="flex flex-col w-[409px] h-[180px] gap-[22.89px]">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center">
-                <img
-                  src={FooterLogo}
-                  alt="Beyond Workz Logo"
-                  className="w-[20px] h-[18px]"
-                />
-              </div>
-
-              <span
-                className="w-[161px] h-[30px] text-[20px] leading-[30px] font-extrabold text-white"
-                style={{ fontFamily: "Inter" }}
-              >
+    <footer className="bg-[#0B1B33] text-[#9CA3AF]">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        {/* Top Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Brand Section */}
+          <div className="space-y-5">
+            <div className="flex items-center gap-3">
+              <img src={FooterLogo} alt="Beyond Workz" className="w-6 h-6" />
+              <span className="text-white font-semibold text-lg">
                 Beyond Workz
               </span>
             </div>
 
-            <p
-              className="w-[302px] h-[68px] text-[14px] leading-[22.4px] font-normal flex items-center"
-              style={{ color: "#A4A4A4", fontFamily: "Inter" }}
-            >
-              Connecting great talent with great opportunities across
-              industries—from office roles to on-site operations.
+            <p className="text-sm leading-relaxed max-w-sm">
+              Connecting great talent with great opportunities. Built for the
+              modern workforce, from corporate desks to construction sites.
             </p>
           </div>
 
+          {/* Job Seekers */}
           <div>
-            <h3
-              className="text-sm font-semibold uppercase tracking-[0.16em]"
-              style={{ color: "#A4A4A4" }}
-            >
-              Job seekers
-            </h3>
-            <ul className="mt-4 space-y-3 text-sm" style={{ color: "#A4A4A4" }}>
+            <p className="text-white font-semibold mb-5">For Job Seekers</p>
+
+            <ul className="space-y-3 text-sm">
               {seekerLinks.map((item) => (
                 <li key={item}>
-                  <a href="#" className="transition-colors hover:text-white">
+                  <a href="#" className="hover:text-white transition">
                     {item}
                   </a>
                 </li>
@@ -73,17 +60,14 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Employers */}
           <div>
-            <h3
-              className="text-sm font-semibold uppercase tracking-[0.16em]"
-              style={{ color: "#A4A4A4" }}
-            >
-              Employers
-            </h3>
-            <ul className="mt-4 space-y-3 text-sm" style={{ color: "#A4A4A4" }}>
+            <p className="text-white font-semibold mb-5">For Employers</p>
+
+            <ul className="space-y-3 text-sm">
               {employerLinks.map((item) => (
                 <li key={item}>
-                  <a href="#" className="transition-colors hover:text-white">
+                  <a href="#" className="hover:text-white transition">
                     {item}
                   </a>
                 </li>
@@ -91,17 +75,14 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Company */}
           <div>
-            <h3
-              className="text-sm font-semibold uppercase tracking-[0.16em]"
-              style={{ color: "#A4A4A4" }}
-            >
-              Company
-            </h3>
-            <ul className="mt-4 space-y-3 text-sm" style={{ color: "#A4A4A4" }}>
+            <p className="text-white font-semibold mb-5">Company</p>
+
+            <ul className="space-y-3 text-sm">
               {companyLinks.map((item) => (
                 <li key={item}>
-                  <a href="#" className="transition-colors hover:text-white">
+                  <a href="#" className="hover:text-white transition">
                     {item}
                   </a>
                 </li>
@@ -110,33 +91,24 @@ const Footer = () => {
           </div>
         </div>
 
-        <div
-          className="mt-10 flex flex-col items-center justify-between gap-4 pt-6 text-xs sm:flex-row"
-          style={{ borderTop: "1px solid #2D3339", color: "#A4A4A4" }}
-        >
+        {/* Bottom */}
+        <div className="mt-14 pt-6 border-t border-[#1F2A44] flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <p>© {new Date().getFullYear()} Beyond Workz. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <button
-              type="button"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-slate-400 ring-1 ring-slate-700 hover:bg-slate-800 hover:text-white"
-              aria-label="Visit our social profile"
-            >
-              <img src={logoMark} alt="" className="h-3 w-3" />
-            </button>
-            <button
-              type="button"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-slate-400 ring-1 ring-slate-700 hover:bg-slate-800 hover:text-white"
-              aria-label="Visit our social profile"
-            >
-              <img src={logoMark} alt="" className="h-3 w-3" />
-            </button>
-            <button
-              type="button"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-slate-400 ring-1 ring-slate-700 hover:bg-slate-800 hover:text-white"
-              aria-label="Visit our social profile"
-            >
-              <img src={logoMark} alt="" className="h-3 w-3" />
-            </button>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-5">
+            <img
+              src={LinkedinIcon}
+              className="w-5 h-5 cursor-pointer hover:opacity-80"
+            />
+            <img
+              src={TwitterIcon}
+              className="w-5 h-5 cursor-pointer hover:opacity-80"
+            />
+            <img
+              src={FacebookIcon}
+              className="w-5 h-5 cursor-pointer hover:opacity-80"
+            />
           </div>
         </div>
       </div>

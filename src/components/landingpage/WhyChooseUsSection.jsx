@@ -39,16 +39,17 @@ const WhyChooseUsSection = () => {
           "linear-gradient(180deg, #FFFFFF 0%, rgba(37, 99, 235, 0.05) 100%)",
       }}
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="max-w-xl mx-auto text-center">
-          <h2 className="text-3xl font-semibold text-[#0F172A]">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#0F172A]">
             Why Choose Us
           </h2>
 
-          <p className="mt-4 text-base text-[#94A3B8]">
+          <p className="mt-4 text-[#94A3B8] text-sm md:text-base">
             We make the job search process simple, transparent, and effective
-            for everyone.
+            for <br />
+            everyone.
           </p>
         </div>
 
@@ -57,23 +58,24 @@ const WhyChooseUsSection = () => {
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="w-[290px] h-[236px] bg-white border border-[#E2E8F0] rounded-[16px] p-6 flex flex-col justify-start transition hover:shadow-md"
+              className="bg-white border border-[#E2E8F0] rounded-2xl p-6 transition duration-300 hover:shadow-lg"
             >
               {/* Icon */}
-              <div className="w-[56px] h-[56px] rounded-[16px] flex items-center justify-center shadow-[0px_8px_16px_0px_#2563EB33] bg-[#2563EB]">
+              <div className="w-14 h-10 flex items-center justify-center">
                 <img
                   src={reason.icon}
                   alt={reason.title}
-                  className="w-[56px] h-[56px] object-contain mt-2"
+                  className="w-30 h-30"
                 />
               </div>
+
               {/* Title */}
-              <h3 className="w-[178.3px] h-[27px] mt-[24px] font-['Inter'] font-semibold text-[18px] leading-[27px] tracking-[0px] text-[#0F172A]">
+              <p className="mt-4 text-lg font-semibold text-[#0F172A]">
                 {reason.title}
-              </h3>
+              </p>
 
               {/* Description */}
-              <p className="w-[239px] h-[68px] mt-[12px] font-['Inter'] font-normal text-[14px] leading-[22.4px] tracking-[0px] text-[#94A3B8]">
+              <p className="mt-3 text-sm leading-relaxed text-[#94A3B8]">
                 {reason.description}
               </p>
             </div>
