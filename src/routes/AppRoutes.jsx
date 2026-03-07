@@ -1,19 +1,34 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import LandingPage from "../pages/public/LandingPage";
 import JobSearchPage from "../pages/public/JobSearchPage";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
+import Profile from "../pages/dashboard/Profile";
 import Dashboard from "../pages/dashboard/Dashboard";
+import DashboardLayout from "../layouts/DashboardLayout";
+import Applications from "../pages/dashboard/Applications";
+import JobSaved from "../pages/dashboard/SavedJobs";
+import JobAlerts from "../pages/dashboard/JobAlerts";
 
 const AppRoutes = () => {
   return (
     <Router>
       <Routes>
+        {/* Public */}
         <Route path="/" element={<LandingPage />} />
         <Route path="/jobs" element={<JobSearchPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+
+        {/* Dashboard */}
+        <Route path="/" element={<DashboardLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/applications" element={<Applications />} />
+          <Route path="/saved-jobs" element={<JobSaved />} />
+          <Route path="/job-alerts" element={<JobAlerts />} />
+        </Route>
       </Routes>
     </Router>
   );

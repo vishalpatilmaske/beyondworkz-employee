@@ -1,4 +1,4 @@
-import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import dashboardIcon from "../../assets/layout/icons/cube.svg";
 import profileIcon from "../../assets/layout/icons/profile.svg";
@@ -9,52 +9,83 @@ import messageIcon from "../../assets/layout/icons/messages.svg";
 import alertIcon from "../../assets/layout/icons/notification.svg";
 import settingsIcon from "../../assets/layout/icons/setting.svg";
 
-const Sidebar = ({ activeTab, setActiveTab }) => {
+const Sidebar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const navItems = [
-    { key: "dashboard", label: "Dashboard", icon: dashboardIcon },
-    { key: "profile", label: "My Profile", icon: profileIcon },
-    { key: "applications", label: "Applications", icon: applicationsIcon },
-    { key: "saved", label: "Saved Jobs", icon: savedIcon },
-    { key: "interviews", label: "Interviews", icon: interviewIcon },
-    { key: "messages", label: "Messages", icon: messageIcon },
+    { label: "Dashboard", icon: dashboardIcon, path: "/" },
+    { label: "My Profile", icon: profileIcon, path: "/profile" },
+    { label: "Applications", icon: applicationsIcon, path: "/applications" },
+    { label: "Saved Jobs", icon: savedIcon, path: "/saved-jobs" },
+    { label: "Interviews", icon: interviewIcon, path: "/" },
+    { label: "Messages", icon: messageIcon, path: "/" },
   ];
 
   const preferenceItems = [
-    { key: "jobAlerts", label: "Job Alerts", icon: alertIcon },
-    { key: "settings", label: "Settings", icon: settingsIcon },
+    { label: "Job Alerts", icon: alertIcon, path: "/job-alerts" },
+    { label: "Settings", icon: settingsIcon, path: "/" },
   ];
 
-  return (
-    <aside className="w-56 bg-white border-r border-slate-200 min-h-[calc(100vh-80px)]">
-      <nav className="space-y-1 p-4">
-        {navItems.map(({ key, label, icon }) => (
-          <button
-            key={key}
-            onClick={() => setActiveTab(key)}
-            className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition ${
-              activeTab === key
-                ? "bg-blue-50 text-blue-600"
-                : "text-slate-700 hover:bg-slate-50"
-            }`}
-          >
-            <img src={icon} alt={label} className="w-5 h-5" />
-            {label}
-          </button>
-        ))}
+  const isActive = (path) => location.pathname === path;
 
-        <div className="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-500 uppercase tracking-wide">
+  return (
+    <aside className="w-60 bg-white border-r border-slate-200 min-h-[calc(100vh-64px)]">
+      <nav className="p-4 space-y-1">
+        {navItems.map((item) => {
+          const active = isActive(item.path);
+
+          return (
+            <button
+              key={item.path}
+              onClick={() => navigate(item.path)}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition
+              ${
+                active
+                  ? "bg-[#EEF2FF] text-[#2563EB]"
+                  : "text-slate-700 hover:bg-slate-50"
+              }`}
+            >
+              <img
+                src={item.icon}
+                alt={item.label}
+                className={`w-5 h-5 ${
+                  active
+                    ? "filter brightness-0 saturate-100 invert-[32%] sepia-[92%] saturate-[1600%] hue-rotate-[215deg] brightness-[92%] contrast-[92%]"
+                    : ""
+                }`}
+              />
+
+              {item.label}
+            </button>
+          );
+        })}
+
+        {/* Preferences Label */}
+        <div className="mt-6 pt-4 border-t border-slate-200 text-xs text-slate-400 uppercase tracking-wide">
           Preferences
         </div>
 
-        {preferenceItems.map(({ key, label, icon }) => (
-          <button
-            key={key}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition"
-          >
-            <img src={icon} alt={label} className="w-5 h-5" />
-            {label}
-          </button>
-        ))}
+        {preferenceItems.map((item) => {
+          const active = isActive(item.path);
+
+          return (
+            <button
+              key={item.path}
+              onClick={() => navigate(item.path)}
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition
+              ${
+                active
+                  ? "bg-[#EEF2FF] text-[#2563EB]"
+                  : "text-slate-700 hover:bg-slate-50"
+              }`}
+            >
+              <img src={item.icon} alt={item.label} className="w-5 h-5" />
+
+              {item.label}
+            </button>
+          );
+        })}
       </nav>
     </aside>
   );
