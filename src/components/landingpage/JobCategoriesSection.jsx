@@ -1,7 +1,7 @@
-import techIcon from "../../assets/category/tech.svg";
-import constructionIcon from "../../assets/category/construction.svg";
-import healthcareIcon from "../../assets/category/healthcare.svg";
-import financeIcon from "../../assets/category/finance.svg";
+import techIcon from "../../assets/icons/landing-page/tech.svg";
+import constructionIcon from "../../assets/icons/landing-page/construction.svg";
+import healthcareIcon from "../../assets/icons/landing-page/healthcare.svg";
+import financeIcon from "../../assets/icons/landing-page/finance.svg";
 
 const categories = [
   { label: "Tech & IT", jobs: "12,450 Jobs", icon: techIcon },

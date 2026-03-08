@@ -1,4 +1,4 @@
-import employerImg from "../../assets/images/profile-creation.jpg";
+import employerImg from "../../assets/images/landing-page/profile-creation.jpg";
 
 const EmployerCard = () => {
   return (

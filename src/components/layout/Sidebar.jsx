@@ -1,13 +1,13 @@
 import { useNavigate, useLocation } from "react-router-dom";
 
-import dashboardIcon from "../../assets/layout/icons/cube.svg";
-import profileIcon from "../../assets/layout/icons/profile.svg";
-import applicationsIcon from "../../assets/layout/icons/applications.svg";
-import savedIcon from "../../assets/layout/icons/saved.svg";
-import interviewIcon from "../../assets/layout/icons/calender.svg";
-import messageIcon from "../../assets/layout/icons/messages.svg";
-import alertIcon from "../../assets/layout/icons/notification.svg";
-import settingsIcon from "../../assets/layout/icons/setting.svg";
+import dashboardIcon from "../../assets/icons/layout/cube.svg";
+import profileIcon from "../../assets/icons/layout/profile.svg";
+import applicationsIcon from "../../assets/icons/layout/applications.svg";
+import savedIcon from "../../assets/icons/layout/saved.svg";
+import interviewIcon from "../../assets/icons/layout/calender.svg";
+import messageIcon from "../../assets/icons/layout/messages.svg";
+import alertIcon from "../../assets/icons/layout/notification.svg";
+import settingsIcon from "../../assets/icons/layout/setting.svg";
 
 const Sidebar = () => {
   const navigate = useNavigate();

@@ -1,5 +1,5 @@
-import checkIcon from "../../assets/common-icon/right-icon.svg";
-import plusIcon from "../../assets/common-icon/plus-icon.svg";
+import checkIcon from "../../assets/icons/common-icon/right-icon.svg";
+import plusIcon from "../../assets/icons/common-icon/plus-icon.svg";
 
 const ProfileCompletion = () => {
   const completed = ["Basic Information", "Work Experience", "Resume Upload"];

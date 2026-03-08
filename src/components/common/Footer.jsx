@@ -1,7 +1,7 @@
-import FooterLogo from "../../assets/common-icon/linkedin.svg";
-import LinkedinIcon from "../../assets/common-icon/linkedin.svg";
-import TwitterIcon from "../../assets/common-icon/twitter.svg";
-import FacebookIcon from "../../assets/common-icon/facebook.svg";
+import FooterLogo from "../../assets/icons/common-icon/linkedin.svg";
+import LinkedinIcon from "../../assets/icons/common-icon/linkedin.svg";
+import TwitterIcon from "../../assets/icons/common-icon/twitter.svg";
+import FacebookIcon from "../../assets/icons/common-icon/facebook.svg";
 
 const seekerLinks = [
   "Browse Jobs",

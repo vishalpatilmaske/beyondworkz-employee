@@ -1,5 +1,5 @@
 import { useState } from "react";
-import arrowDown from "../../assets/icons/down-arrow.svg";
+import arrowDown from "../../assets/icons/common-icon/down-arrow.svg";
 
 const FiltersSidebar = () => {
   const [openSections, setOpenSections] = useState({

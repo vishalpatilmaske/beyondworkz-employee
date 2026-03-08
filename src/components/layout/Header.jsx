@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { authService } from "../../services/authService";
 
-import notification from "../../assets/layout/icons/Notification.svg";
-import downarrow from "../../assets/layout/icons/down-arrow.svg";
+import notification from "../../assets/icons/layout/Notification.svg";
+import downarrow from "../../assets/icons/layout/down-arrow.svg";
 
 import NotificationDropdown from "./NotificationDropdown";
 

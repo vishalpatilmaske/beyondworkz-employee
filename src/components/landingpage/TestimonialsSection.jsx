@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Sarahjenkins from "../../assets/Sarah_Jenkins.svg"
+import Sarahjenkins from "../../assets/images/common/userimage.svg";
 
 const TestimonialSection = () => {
   const testimonials = [
@@ -33,17 +33,12 @@ const TestimonialSection = () => {
   };
 
   const prevSlide = () => {
-    setActive((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
+    setActive((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
   };
 
   return (
-    <section
-      className="w-full flex justify-center bg-white py-24"
-    >
+    <section className="w-full flex justify-center bg-white py-24">
       <div className="w-[1440px] flex flex-col items-center">
-
         {/* Slider Container */}
         <div className="relative flex items-center justify-center h-[420px]">
           {testimonials.map((item, index) => {
@@ -53,9 +48,10 @@ const TestimonialSection = () => {
               <div
                 key={item.id}
                 className={`absolute transition-all duration-500 ease-in-out
-                  ${isActive
-                    ? "z-20 scale-100 opacity-100"
-                    : "z-10 scale-90 opacity-40"
+                  ${
+                    isActive
+                      ? "z-20 scale-100 opacity-100"
+                      : "z-10 scale-90 opacity-40"
                   }`}
                 style={{
                   transform: `translateX(${(index - active) * 420}px)`,
@@ -70,9 +66,7 @@ const TestimonialSection = () => {
                   text-center"
                 >
                   {/* Stars */}
-                  <div className="text-yellow-400 text-lg">
-                    ⭐⭐⭐⭐⭐
-                  </div>
+                  <div className="text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
 
                   {/* Testimonial Text */}
                   <p className="font-['Inter'] font-medium text-[24px] leading-[36px] tracking-[-0.24px] text-center text-slate-700 max-w-[702px] mx-auto text-[#0F172A]">
@@ -92,13 +86,9 @@ const TestimonialSection = () => {
                       className="w-16 h-16 rounded-full object-cover"
                     />
 
-                    <p className="font-semibold text-slate-900">
-                      {item.name}
-                    </p>
+                    <p className="font-semibold text-slate-900">{item.name}</p>
 
-                    <p className="text-sm text-slate-500">
-                      {item.role}
-                    </p>
+                    <p className="text-sm text-slate-500">{item.role}</p>
                   </div>
                 </div>
               </div>
@@ -126,8 +116,7 @@ const TestimonialSection = () => {
               <div
                 className="absolute left-0 top-0 h-full bg-blue-600 rounded-[99px] transition-all duration-300"
                 style={{
-                  width: `${((active + 1) / testimonials.length) * 100
-                    }%`,
+                  width: `${((active + 1) / testimonials.length) * 100}%`,
                 }}
               />
             </div>

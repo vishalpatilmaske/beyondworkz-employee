@@ -1,7 +1,7 @@
-import networkIcon from "../../assets/icons/network.svg";
-import verifiedIcon from "../../assets/icons/verified.svg";
-import growthIcon from "../../assets/icons/grow.svg";
-import fastIcon from "../../assets/icons/light.svg";
+import networkIcon from "../../assets/icons/landing-page/network.svg";
+import verifiedIcon from "../../assets/icons/landing-page/verified.svg";
+import growthIcon from "../../assets/icons/landing-page/grow.svg";
+import fastIcon from "../../assets/icons/landing-page/light.svg";
 
 const reasons = [
   {

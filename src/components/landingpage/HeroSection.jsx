@@ -4,9 +4,9 @@ import genpact from "../../assets/logos/genpact.svg";
 import icici from "../../assets/logos/icici.svg";
 import kotak from "../../assets/logos/kotak.svg";
 import techMahindra from "../../assets/logos/techmahindra.svg";
-import heroImage from "../../assets/images/hero-image.png";
-import searchIcon from "../../assets/icons/search.svg";
-import locationIcon from "../../assets/icons/location.svg";
+import heroImage from "../../assets/images/landing-page/hero-image.png";
+import searchIcon from "../../assets/icons/common-icon/search.svg";
+import locationIcon from "../../assets/icons/common-icon/location.svg";
 
 const trendingTags = [
   "Remote",

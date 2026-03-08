@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import arrowIcon from "../../assets/icons/arrow.svg";
+import arrowIcon from "../../assets/icons/landing-page/arrow.svg";
 
 const NAV_LINKS = [
   { label: "Find Jobs", href: "/jobs" },

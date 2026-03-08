@@ -1,12 +1,10 @@
 import capgemini from "../../assets/logos/capgemini.svg";
-import genpact from "../../assets/logos/genpact.svg";
 import icici from "../../assets/logos/icici.svg";
-import kotak from "../../assets/logos/kotak.svg";
 import techMahindra from "../../assets/logos/techmahindra.svg";
-import coolPlaceImg from "../../assets/images/helper icon.svg";
+import coolPlaceImg from "../../assets/images/landing-page/girlondesk.png";
 import reliance from "../../assets/logos/reliance.svg";
 import jio from "../../assets/logos/jio.svg";
-import futureStep from "../../assets/logos/FutureStep_Limited.svg";
+import futureStep from "../../assets/logos/reliance.svg";
 
 const companyLogos = [
   capgemini,
@@ -27,7 +25,6 @@ const CoolPlacesSection = () => {
       }}
     >
       <div className="w-[1440px] px-6 pt-20 flex flex-col">
-
         {/* Heading */}
         <div className="text-center">
           <h2 className="font-['Inter'] font-bold text-[32px] leading-[20px] tracking-[0%] uppercase text-[#191500]">
@@ -60,7 +57,6 @@ const CoolPlacesSection = () => {
             className="w-[491px] object-contain"
           />
         </div>
-
       </div>
     </section>
   );

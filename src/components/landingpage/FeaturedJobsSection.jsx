@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import TechCorp from "../../assets/TechCorp.svg";
-import Buildlt from "../../assets/Test.svg";
-import Creative from "../../assets/Creative.svg";
+import TechCorp from "../../assets/icons/landing-page/feature1.svg";
+import Buildlt from "../../assets/icons/landing-page/feature2.svg";
+import Creative from "../../assets/icons/landing-page/feature3.svg";
 
 const jobs = [
   {

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import searchIcon from "../../assets/icons/search.svg";
-import locationIcon from "../../assets/icons/location.svg";
-import experienceIcon from "../../assets/icons/briefcase.svg";
+import searchIcon from "../../assets/icons/common-icon/search.svg";
+import locationIcon from "../../assets/icons/common-icon/location.svg";
+import experienceIcon from "../../assets/icons/common-icon/briefcase-gray.svg";
 
 const SearchBar = () => {
   const [jobTitle, setJobTitle] = useState("");

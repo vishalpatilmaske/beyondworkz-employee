@@ -1,8 +1,8 @@
 import SkillsTag from "./SkillsTag";
-import savedIcon from "../../assets/common-icon/saved.svg";
+import savedIcon from "../../assets/icons/common-icon/saved.svg";
+import location from "../../assets/icons/common-icon/location.svg";
+import cash from "../../assets/icons/common-icon/cash.svg";
 import netflix from "../../assets/images/common/netflix.jpg";
-import location from "../../assets/common-icon/location.svg";
-import cash from "../../assets/common-icon/cash.svg";
 
 const SavedJobCard = () => {
   return (

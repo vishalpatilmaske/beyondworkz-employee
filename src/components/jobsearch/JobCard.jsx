@@ -1,6 +1,6 @@
-import bookmarkIcon from "../../assets/icons/save.svg";
-import locationIcon from "../../assets/icons/location.svg";
-import expIcon from "../../assets/icons/briefcase.svg";
+import bookmarkIcon from "../../assets/icons/common-icon/saved.svg";
+import locationIcon from "../../assets/icons/common-icon/location.svg";
+import expIcon from "../../assets/icons/common-icon/briefcase-gray.svg";
 
 const JobCard = ({ job }) => {
   return (

@@ -1,7 +1,7 @@
 import bookmarkIcon from "../../assets/icons/dashboard/bookmark.svg";
 import locationIcon from "../../assets/icons/dashboard/location.svg";
 import salaryIcon from "../../assets/icons/dashboard/salary.svg";
-import expIcon from "../../assets/icons/briefcase.svg";
+import expIcon from "../../assets/icons/dashboard/briefcase.svg";
 import companyLogo from "../../assets/images/dashboard/logo1.jpg";
 
 const RecommendedJobCard = () => {

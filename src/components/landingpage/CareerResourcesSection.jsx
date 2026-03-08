@@ -1,7 +1,7 @@
 import React from "react";
-import interviewImg from "../../assets/careear_resource/interview.svg";
-import bluejobsImg from "../../assets/careear_resource/Bluejobs.svg";
-import SalaryGuidImg from "../../assets/careear_resource/SalaryGuide.svg";
+import interviewImg from "../../assets/images/landing-page/career1.jpg";
+import bluejobsImg from "../../assets/images/landing-page/career2.jpg";
+import SalaryGuidImg from "../../assets/images/landing-page/career3.jpg";
 
 const articles = [
   {
@@ -28,10 +28,8 @@ const CareerResourcesSection = () => {
   return (
     <section className="w-full bg-white">
       <div className="mx-auto max-w-[1280px] px-8 py-16">
-
         {/* Header */}
-        <header
-          className="w-[1216px] h-[112px] mx-auto flex flex-col items-center justify-center gap-4 text-center">
+        <header className="w-[1216px] h-[112px] mx-auto flex flex-col items-center justify-center gap-4 text-center">
           <h2 className="text-3xl font-semibold text-slate-900">
             Career Resources
           </h2>

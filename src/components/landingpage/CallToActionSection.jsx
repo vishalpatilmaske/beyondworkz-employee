@@ -1,6 +1,6 @@
-import GoogleIcon from "../../assets/icons/google-icon.svg";
-import MailIcon from "../../assets/icons/mail.svg";
-import CtaBg from "../../assets/images/background-poster.png";
+import GoogleIcon from "../../assets/icons/common-icon/google-icon.svg";
+import MailIcon from "../../assets/icons/common-icon/mail.svg";
+import CtaBg from "../../assets/images/landing-page/background-poster.png";
 
 const CallToActionSection = () => {
   return (

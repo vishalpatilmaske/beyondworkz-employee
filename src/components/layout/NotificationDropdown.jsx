@@ -1,6 +1,6 @@
-import jobIcon from "../../assets/common-icon/brifecase-orange.svg";
-import viewIcon from "../../assets/common-icon/eye-orange.svg";
-import interviewIcon from "../../assets/common-icon/calender-orange.svg";
+import jobIcon from "../../assets/icons/common-icon/brifecase-orange.svg";
+import viewIcon from "../../assets/icons/common-icon/eye-orange.svg";
+import interviewIcon from "../../assets/icons/common-icon/calender-orange.svg";
 
 const notifications = [
   {

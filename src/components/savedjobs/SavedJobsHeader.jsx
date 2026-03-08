@@ -1,5 +1,5 @@
-import downarrow from "../../assets/common-icon/down-arrow.svg";
-import filter from "../../assets/common-icon/filter.svg";
+import downarrow from "../../assets/icons/common-icon/down-arrow.svg";
+import filter from "../../assets/icons/common-icon/filter.svg";
 
 const SavedJobsHeader = () => {
   return (

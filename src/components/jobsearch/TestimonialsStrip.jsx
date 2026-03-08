@@ -1,7 +1,7 @@
-import starIcon from "../../assets/icons/star.svg";
-import user1 from "../../assets/icons/user.svg";
-import user2 from "../../assets/icons/user.svg";
-import user3 from "../../assets/icons/user.svg";
+import starIcon from "../../assets/icons/landing-page/star.svg";
+import user1 from "../../assets/icons/landing-page/user.svg";
+import user2 from "../../assets/icons/landing-page/user.svg";
+import user3 from "../../assets/icons/landing-page/user.svg";
 
 const testimonials = [
   {
