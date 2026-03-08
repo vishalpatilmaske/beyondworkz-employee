@@ -78,7 +78,7 @@ const Header = () => {
           <div
             className="flex items-center gap-3 cursor-pointer"
             onClick={() => {
-              navigate("/profile");
+              navigate("/dashboard/profile");
             }}
           >
             <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold">

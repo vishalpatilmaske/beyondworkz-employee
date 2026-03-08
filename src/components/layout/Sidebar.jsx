@@ -15,16 +15,20 @@ const Sidebar = () => {
 
   const navItems = [
     { label: "Dashboard", icon: dashboardIcon, path: "/" },
-    { label: "My Profile", icon: profileIcon, path: "/profile" },
-    { label: "Applications", icon: applicationsIcon, path: "/applications" },
-    { label: "Saved Jobs", icon: savedIcon, path: "/saved-jobs" },
-    { label: "Interviews", icon: interviewIcon, path: "/interviews" },
-    { label: "Messages", icon: messageIcon, path: "/messages" },
+    { label: "My Profile", icon: profileIcon, path: "/dashboard/profile" },
+    {
+      label: "Applications",
+      icon: applicationsIcon,
+      path: "/dashboard/applications",
+    },
+    { label: "Saved Jobs", icon: savedIcon, path: "/dashboard/saved-jobs" },
+    { label: "Interviews", icon: interviewIcon, path: "/dashboard/interviews" },
+    { label: "Messages", icon: messageIcon, path: "/dashboard/messages" },
   ];
 
   const preferenceItems = [
-    { label: "Job Alerts", icon: alertIcon, path: "/job-alerts" },
-    { label: "Settings", icon: settingsIcon, path: "/setting" },
+    { label: "Job Alerts", icon: alertIcon, path: "/dashboard/job-alerts" },
+    { label: "Settings", icon: settingsIcon, path: "/dashboard/setting" },
   ];
 
   const isActive = (path) => location.pathname === path;
